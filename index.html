@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Energy Monitor</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 20px; bg-color: #f4f6f9; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 30px; }
+        .summary-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 30px; display: flex; justify-content: space-around; }
+        .metric { text-align: center; }
+        .metric h3 { margin: 0; color: #555; }
+        .metric p { font-size: 24px; font-weight: bold; margin: 5px 0; color: #007bff; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 5px solid #28a745; }
+        .card.alert-border { border-top-color: #dc3545; }
+        .alert-msg { background: #f8d7da; color: #721c24; padding: 10px; border-radius: 5px; margin-top: 15px; font-weight: bold; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏫 Smart Campus Energy Monitoring System</h1>
+            <p>Real-time building electricity consumption analytics</p>
+        </header>
+
+        <!-- Summary Section (Enhancement Commit) -->
+        <div class="summary-card">
+            <div class="metric">
+                <h3>Total Campus Consumption</h3>
+                <p id="total-consumption">295 kWh</p>
+            </div>
+            <div class="metric">
+                <h3>Highest Energy Consumer</h3>
+                <p id="highest-consumer">Engineering Block (130 kWh)</p>
+            </div>
+        </div>
+
+        <!-- Buildings Grid (Initial Commit Data) -->
+        <div class="grid">
+            <!-- Building 1 -->
+            <div class="card alert-border">
+                <h2>Engineering Block</h2>
+                <p><strong>Daily Usage:</strong> 130 kWh</p>
+                <p><strong>Target:</strong> 90 kWh</p>
+                <div class="alert-msg">⚠️ CRITICAL: Exceeded 100 kWh limit by 30 kWh!</div>
+            </div>
+
+            <!-- Building 2 -->
+            <div class="card">
+                <h2>Science Lab</h2>
+                <p><strong>Daily Usage:</strong> 85 kWh</p>
+                <p><strong>Target:</strong> 80 kWh</p>
+            </div>
+
+            <!-- Building 3 -->
+            <div class="card">
+                <h2>Main Library</h2>
+                <p><strong>Daily Usage:</strong> 80 kWh</p>
+                <p><strong>Target:</strong> 75 kWh</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
